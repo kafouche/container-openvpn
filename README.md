@@ -12,7 +12,7 @@ This image is *mainly* used to forward traffic from another container throught O
 ### Mount / Volume
 | Volume           | Description                  |
 |------------------|------------------------------|
-| `'/etc/openvpn'` | Default server tcp/udp port. |
+| `/etc/openvpn` | Default server tcp/udp port. |
 
 
 ## Build
@@ -41,8 +41,8 @@ docker run --detach \
     --name=image \
     --net=container:openvpn \
     --restart=unless-stopped \
+    ... \
     repository/image:tagname
-    ...
 ```
 
 ### Composer
