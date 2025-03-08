@@ -62,9 +62,9 @@ RUN         apk --no-cache --update upgrade \
 
 COPY        --from=buildstage /tmp/openvpn/target/ /
 
-WORKDIR     '/config'
+VOLUME      /config
 
-VOLUME      '/config'
+WORKDIR     /config
 
-ENTRYPOINT  [ '/usr/sbin/openvpn' ]
-CMD         [ 'client.conf' ]
+ENTRYPOINT  [ "/usr/sbin/openvpn" ]
+CMD         [ "client.conf" ]
