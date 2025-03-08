@@ -57,10 +57,11 @@ RUN         apk --no-cache --update upgrade \
                 libcap-ng \
                 lz4-libs \
                 lzo \
-                openssl \
-            && mkdir --parents /config
+                openssl
 
 COPY        --from=buildstage /tmp/openvpn/target/ /
+
+RUN         mkdir --parents /config
 
 VOLUME      /config
 
