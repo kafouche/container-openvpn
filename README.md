@@ -1,29 +1,21 @@
 # OpenVPN Client
+
 This image is based on *Alpine Linux* latest stable image.
 
 This image is *mainly* used to forward traffic from another container throught OpenVPN.
 
-## Image
-### Environment
-| Parameter | Description                                          |
-|-----------|------------------------------------------------------|
-| `TZ`      | Set container's timezone (*default*: `Europe/Paris`) |
+## Volumes
 
-### Mount / Volume
-| Volume           | Description                  |
-|------------------|------------------------------|
-| `/etc/openvpn` | Default server tcp/udp port. |
-
-
-## Build
-```
-docker build -t kafouche/openvpn:latest .
-```
-
+| Parameter | Description              |
+|-----------|--------------------------|
+| `/config` | Configuration Directory. |
 
 ## Run
+
 The following `code blocks` are only there as **examples**.
+
 ### Manual
+
 ```
 docker run --detach \
     --cap-add=NET_ADMIN \
@@ -76,4 +68,18 @@ services:
         network_mode: "service:openvpn"
         restart: unless-stopped
         ...
+```
+
+## Build
+
+**Docker**
+
+```
+docker build -t kafouche/openvpn:latest .
+```
+
+**Podman**
+
+```
+podman build -t kafouche/openvpn:latest .
 ```
