@@ -2,17 +2,17 @@
 # Kafouche OpenVPN Image (source).
 
 LABEL       org.opencontainers.image.authors="kafouche"
-LABEL       org.opencontainers.image.base.name="ghcr.io/kafouche/openvpn:2.6.13"
+LABEL       org.opencontainers.image.base.name="ghcr.io/kafouche/openvpn:2.6.14"
 LABEL       org.opencontainers.image.ref.name="ghcr.io/kafouche/alpine"
 LABEL       org.opencontainers.image.source="https://github.com/kafouche/docker-openvpn"
 LABEL       org.opencontainers.image.title="OpenVPN"
-LABEL       org.opencontainers.image.version="2.6.13"
+LABEL       org.opencontainers.image.version="2.6.14"
 LABEL       image.tags[0]="ghcr.io/kafouche/openvpn:latest-src"
 
 
 # ------------------------------------------------------------------------------
 
-ARG         RELEASE=2.6.13
+ARG         RELEASE=2.6.14
 
 ARG         SOURCE_URL=https://build.openvpn.net/downloads/releases/openvpn-$RELEASE.tar.gz
 
