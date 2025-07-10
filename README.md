@@ -6,9 +6,9 @@ This image is *mainly* used to forward traffic from another container throught O
 
 ## Volumes
 
-| Parameter | Description              |
-|-----------|--------------------------|
-| `/config` | Configuration Directory. |
+| Parameter      | Description              |
+|----------------|--------------------------|
+| `/etc/openvpn` | Configuration Directory. |
 
 ## Run
 
