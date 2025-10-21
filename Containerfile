@@ -1,4 +1,4 @@
-# Dockerfile: openvpn
+# Containerfile: openvpn
 # Kafouche OpenVPN Image.
 
 FROM        ghcr.io/kafouche/alpine:latest
